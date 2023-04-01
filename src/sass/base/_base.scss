@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/georgia-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/arial-regular.ttf") format("ttf");
+}
+
+
+
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: "Georgia";
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 4.4rem;
+  line-height: 130%;
+  color: $color-white;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 3.5rem;
+  line-height: 130%;
+  letter-spacing: 0.1em;
+  color: $color-subtitle;
+  margin: 0;
+  font-weight: normal;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}

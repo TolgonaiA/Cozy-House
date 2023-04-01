@@ -1,0 +1,133 @@
+.footer {
+  background: url(../img/promo/start-screen-gradient-background.jpg) no-repeat;
+  background-size: cover;
+  padding-top: 57px;
+
+  &__img {
+
+    margin-top: -18px;
+
+    @include media-tablet {
+      margin-top: 67px;
+    }
+
+    @include media-mobile {
+      width: 85%;
+      margin-top: 0;
+    }
+  }
+
+  @include media-tablet {
+    padding-top: 30px;
+  }
+
+  @include media-mobile {
+    padding-top: 31px;
+  }
+
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    width: 61%;
+    justify-content: space-between;
+
+    @include media-tablet {
+      width: 100%;
+      padding: 0 52px;
+    }
+
+    @include media-tablet-sm {
+      padding: 0;
+    }
+
+    @include media-mobile {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    width: 40%;
+    
+
+    @include media-tablet {
+      width: 47%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    @include media-tablet-sm {
+      width: 49%;
+    }
+
+    @include media-mobile {
+      width: 100%;
+      margin-bottom: 29px;
+    }
+
+    h2 {
+      color: $color-white;
+
+      @include media-tablet-sm {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  &__social {
+    font-size: 2rem;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: $color-brand;
+    display: block;
+    margin-top: 40px;
+    padding-left: 61px;
+    position: relative;
+    text-decoration: none;
+
+    @include media-tablet {
+      padding-left: 45px;
+      margin-top: 35px;
+    }
+
+    @include media-mobile {
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+
+%social {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 32px;
+  top: 0px;
+  left: 0px;
+}
+
+@each $icon in $icons {
+  .icon--#{$icon}::before {
+    @extend %social;
+    background: url(../img/footer/icon-#{$icon}.svg) 50% no-repeat;
+
+
+    @include media-mobile {
+      left: 19px;
+    }
+  }
+
+  
+}

@@ -1,0 +1,85 @@
+.help {
+  padding: 82px 0 0 0;
+
+  @include media-mobile {
+    padding-top: 42px;
+  }
+
+  h2 {
+    text-align: center;
+
+    @include media-mobile {
+      font-size: 2.5rem;
+    }
+
+  }
+}
+
+.help-list {
+  width: 100%;
+  display: flex;
+  padding: 60px 87px 100px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 55px 120px;
+
+  
+  @include media-tablet {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 60px 48px 100px;
+    gap: 55px 35px;
+  }
+
+  @include media-tablet-sm {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 60px 0 100px;
+    gap: 55px;
+  }
+
+  @include media-mobile {
+    padding-top: 34px;
+    gap: 19px 13px;
+    padding-bottom: 42px;
+  }
+
+  &__item {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: $color-subtitle;
+    position: relative;
+    padding-top: 89px;
+
+    @include media-mobile {
+      font-size: 15px;
+      padding-top: 80px;
+    }
+  }
+
+}
+
+%cyrcle {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+
+  
+}
+
+@each $pic in $pics {
+  .icon-#{$pic}::before {
+    @extend %cyrcle;
+    background: url(../img/help/icon-#{$pic}.svg) 50% no-repeat;
+
+    @include media-mobile {
+      background-size: 80%;    
+
+    }
+  }
+}

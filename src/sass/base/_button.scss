@@ -1,0 +1,103 @@
+.button {
+  border: none;
+  border-radius: 100px;
+  box-sizing: border-box;
+  display: block;
+
+  &_big-colored {
+    background: $color-brand;
+    padding: 15px 45px;
+    font-size: 1.7rem;
+    line-height: 130%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 0.1em;
+
+    @include media-tablet {
+      margin: 0 auto;
+    }
+  }
+
+  &_transparent {
+    padding: 13px 45px;
+    font-size: 1.7rem;
+    line-height: 130%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 0.1em;
+    background: transparent;
+    border: 2px solid $color-brand;
+  }
+
+  &_round-colored {
+    background: $color-brand;
+  }
+
+  &:hover {
+    background: $color-brand-light;
+    border-color: $color-brand-light;
+  }
+
+  &_disabled {
+    border: 2px solid $color-text-dark!important;
+    color: $color-text-dark;
+    background-color: none!important;
+  }
+
+  
+}
+
+.burger {
+  display: none;
+
+  
+
+
+  @include media-tablet-sm{
+    display: block;
+
+    
+    
+
+    &__item {
+      display: block;
+      width: 30px;
+      height: 1px;
+      background-color: $color-brand;
+      position: relative;
+
+
+      &:before {
+        content: '';
+        position: relative;
+        display: block;
+        width: 30px;
+        height: 1px;
+        background-color: $color-brand;
+        top: 10px;
+      }
+
+      &:after {
+        content: '';
+        position: relative;
+        display: block;
+        width: 30px;
+        height: 1px;
+        background-color: $color-brand;
+        top: -10px;
+      }
+
+      &_pets {
+        background-color: $color-black;
+
+        &::after, &::before {
+          background-color: $color-black;
+        }
+      }
+    }
+
+    
+  }
+
+  @include media-mobile {
+    margin-right: 35px;
+  }
+}
