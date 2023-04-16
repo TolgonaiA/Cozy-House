@@ -1,17 +1,30 @@
 .pets {
   background: $color-background;
-  padding: 80px 0 100px 0;
+  padding: 0px 0 100px 0;
+  position: relative;
+
+  &_wrap {
+    padding-top: 80px;
+
+    @include media-tablet-sm {
+      padding-top: 45px;
+    }
+  }
 
   @include media-tablet {
     padding-bottom: 75px;
   }
-
-  @include media-mobile {
-    padding-top: 45px;
+  
+  @include media-tablet-sm {
+    // position: relative;
+    overflow: hidden;
   }
+
+ 
 
   @include media-mobile {
     padding-bottom: 45px;
+    
   }
 
   h2 {
@@ -55,7 +68,7 @@
     justify-content: space-between;
 
     @include media-tablet-sm {
-      width: 300px;
+      max-width: 300px;
     }
   }
 }

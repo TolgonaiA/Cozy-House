@@ -1,33 +1,157 @@
+.transition-right {
+  animation-name: moveRight;
+  animation-duration: 2s;
+}
+
+.transition-left {
+  animation-name: moveLeft;
+  animation-duration: 2s;
+}
+
+@keyframes moveRight {
+  from {left: -1100px;}
+  to {left: -2200px};
+}
+
+
+@keyframes moveLeft {
+  from {left: -1100px;}
+  to {left: 0px;};
+}
+
+.transition-right-tablet {
+  animation-name: moveRightTablet;
+  animation-duration: 2s;
+}
+
+.transition-left-tablet {
+  animation-name: moveLeftTablet;
+  animation-duration: 2s;
+}
+
+@keyframes moveRightTablet {
+  from {left: -638px;}
+  to {left: -1276px}
+}
+@keyframes moveLeftTablet {
+  from {left: -638px;}
+  to {left: 0px;}
+}
+
+
+.transition-right-mobile {
+  animation-name: moveRightMobile;
+  animation-duration: 2s;
+}
+
+.transition-left-mobile {
+  animation-name: moveLeftMobile;
+  animation-duration: 2s;
+}
+
+@keyframes moveLeftMobile {
+  from {left: -315px;}
+  to {left: 0px}
+}
+@keyframes moveRightMobile {
+  from {left: -315px;}
+  to {left: -630px}
+}
+
+
+
 .slider {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
 
-  &__wrap {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 9rem;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 53px;
-    justify-content: center;
+  @include media-tablet-bg {
+    width: 740px;
+  }
 
-    @include media-tablet {
-      grid-template-columns: repeat(2, 270px);
-      column-gap: 40px;
-      grid-template-rows: 1fr;
-      grid-auto-rows: 0;
-      overflow-y: hidden;
-      padding: 0px;
+  @include media-tablet-sm {
+    width: 300px;
+    position: relative;
+  }
+
+  // @include media-mobile {
+  //   width: 280px;
+  // }
+  
+
+  &_block {
+    display: flex;
+    position: relative;
+    gap: 90px;
+    left: -1100px;
+    
+
+
+    @include media-tablet-bg {
+      gap: 40px;
+      left: -638px;
     }
 
     @include media-tablet-sm {
-      padding: 0 7px;
-      grid-template-columns: repeat(1, 270px);
+      left: -315px;
+    }
+    
+
+  }
+
+  &_item {
+    display: flex;
+    gap: 90px;
+    border: 5px solid transparent;
+    padding: 0 5px;
+
+    @include media-tablet-bg {
+      gap: 40px;
     }
 
-    @include media-mobile {
-      grid-template-columns: repeat(1, 1fr);
+    @include media-tablet-sm {
+      padding: 0;
     }
+
+    
+  }
+  
+  
+  &__wrap {
+    display: flex;
+    padding: 10px 0px;
+    overflow: hidden;
+    width: 1010px;
+
+
+    @include media-tablet-bg {
+      width: 604px;
+    }
+
+    @include media-tablet-sm {
+      width: 300px;
+    }
+    
+
+    // @include media-tablet {
+    //   grid-template-columns: repeat(2, 270px);
+    //   column-gap: 40px;
+    //   grid-template-rows: 1fr;
+    //   grid-auto-rows: 0;
+    //   overflow-y: hidden;
+    //   padding: 0px;
+    // }
+
+    // @include media-tablet-sm {
+    //   padding: 0 7px;
+    //   grid-template-columns: repeat(1, 270px);
+    // }
+
+    // @include media-mobile {
+    //   grid-template-columns: repeat(1, 1fr);
+    // }
   }
 
   &__btn {
@@ -35,6 +159,7 @@
     height: 52px;
     border: 2px solid $color-brand;
     border-radius: 100%;
+    transition: 1s;
 
     &_left {
       background: url(../img/friends/arrow.svg) no-repeat center;
@@ -48,10 +173,16 @@
     &:hover {
       background-color: $color-brand-light;
       border: 2px solid $color-brand-light;
+      box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+      transition-delay: 0.2s;
     }
 
     &:disabled {
       background: none;
+      border: 2px solid $color-text-dark;
+      color: $color-text-dark;
+      box-shadow: none;
+      // background-color: none!important;
     }
 
     

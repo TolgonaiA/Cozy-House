@@ -12,12 +12,16 @@
   <section class="promo">
     <div class="wrapper">
       <header class="header">
-        <div>
+        <div id="logo">
           <a href="#" class="logo">Cozy House</a>
           <p class="logo__text">Shelter for pets in Boston</p>
         </div>
-        <nav class="promo__navigation">
-          <ul class="navigation">
+        <nav class="promo__navigation" id="menu">
+          <div class="navigation_logo">
+            <a href="#" class="logo">Cozy House</a>
+            <p class="logo__text">Shelter for pets in Boston</p>
+          </div>
+          <ul class="navigation" id="navigation">
             <li>
               <a href="#" class="navigation__link navigation__link_hover">About the shelter</a>
             </li>
@@ -25,14 +29,14 @@
               <a href="pets.html" class="navigation__link">Our pets</a>
             </li>
             <li>
-              <a href="#" class="navigation__link">Help the shelter</a>
+              <a href="#helpus" class="navigation__link">Help the shelter</a>
             </li>
             <li>
               <a href="#contacts" class="navigation__link">Contacts</a>
             </li>
           </ul>
         </nav>
-        <div class="burger">
+        <div class="burger" id="burger">
           <span class="burger__item"></span>
         </div>
       </header>
@@ -45,6 +49,7 @@
         <img class="promo__img" src="src/img/promo/start-screen-puppy.png" alt="dog">
       </div>
     </div>
+    
   </section>
   <section class="about">
     <div class="wrapper">
@@ -64,28 +69,15 @@
       <div class="friends__wrap slider">
         <button class="slider__btn slider__btn_left friends__btn_left"></button>
         <div class="slider__wrap">
-          <div class="pet">
-            <img src="./src/img/friends/pets-katrine.png" alt="Katrine">
-            <p class="pet__title">Katrine</p>
-            <button class="button button_transparent">Learn more</button>
-          </div>
-          <div class="pet pet_tablet-sm pet_mobile">
-            <img src="./src/img/friends/pets-jennifer.png" alt="Jennifer">
-            <p class="pet__title">Jennifer</p>
-            <button class="button button_transparent">Learn more</button>
-          </div>
-          <div class="pet pet_mobile pet_tablet">
-            <img src="./src/img/friends/pets-woody.png" alt="Woody">
-            <p class="pet__title">Woody</p>
-            <button class="button button_transparent">Learn more</button>
-          </div>
+          <div class="slider_block"></div>
         </div>
         <button class="slider__btn slider__btn_right friends__btn_right"></button>
       </div>
       <a href="pets.html" class="link link_friends">Get to know the rest</a>
     </div>
+    
   </section>
-  <section class="help" id="help">
+  <section class="help" id="helpus">
     <div class="wrapper">
       <h2>How you can help <br> our shelter</h2>
       <div class="help-list">
@@ -131,5 +123,8 @@
       <img class="footer__img" src="./src/img/footer/footer-puppy.png" alt="footer-dog">
     </div>
   </footer>
+  <div class="overlay overlay_active" id="overlay"><div class="modal"></div></div>
+  
+  <script src="index.js"></script>
 </body>
 </html>

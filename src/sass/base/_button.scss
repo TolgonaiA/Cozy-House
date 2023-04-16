@@ -3,6 +3,7 @@
   border-radius: 100px;
   box-sizing: border-box;
   display: block;
+  transition: 1s;
 
   &_big-colored {
     background: $color-brand;
@@ -34,6 +35,8 @@
   &:hover {
     background: $color-brand-light;
     border-color: $color-brand-light;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+    transition-delay: 0.2s;
   }
 
   &_disabled {
@@ -53,8 +56,11 @@
 
   @include media-tablet-sm{
     display: block;
-
-    
+    padding-top: 11px;
+    padding-bottom: 11px;
+    cursor: pointer;
+    z-index: 999;
+    transition: rotate 2s;
     
 
     &__item {
@@ -88,10 +94,16 @@
       &_pets {
         background-color: $color-black;
 
+        
+
         &::after, &::before {
           background-color: $color-black;
         }
       }
+    }
+
+    &_vertical {
+      rotate: -90deg;
     }
 
     

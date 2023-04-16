@@ -9,92 +9,56 @@
   <link rel="icon" type="image/x-icon" href="src/img/favicon/favicon.ico">
 </head>
 <body>
-  <section class="header_pets">
-    <div class="wrapper">
-      <header class="header">
-        <div>
-          <a href="index.html" class="logo logo_pets">Cozy House</a>
-          <p class="logo__text logo__text_pets">Shelter for pets in Boston</p>
-        </div>
-        <nav class="header__navigation promo__navigation">
-          <ul class="navigation">
-            <li>
-              <a href="index.html" class="navigation__link navigation__link_pets">About the shelter</a>
-            </li>
-            <li>
-              <a href="#" class="navigation__link navigation__link_pets navigation__link_pets_hover">Our pets</a>
-            </li>
-            <li>
-              <a href="https://rolling-scopes-school.github.io/tolgonaia-JSFE2023Q1/shelter/index.html#help" class="navigation__link navigation__link_pets">Help the shelter</a>
-            </li>
-            <li>
-              <a href="#contacts" class="navigation__link navigation__link_pets">Contacts</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="burger">
-          <span class="burger__item burger__item_pets"></span>
-        </div>
-      </header>
-    </div>
-  </section>
   <section class="pets">
-    <div class="wrapper">
+    <div class="header_pets">
+      <div class="wrapper">
+        <header class="header">
+          <div id="logo">
+            <a href="index.html" class="logo logo_pets">Cozy House</a>
+            <p class="logo__text logo__text_pets">Shelter for pets in Boston</p>
+          </div>
+          <nav class="header__navigation" id="menu">
+            <div class="navigation_logo">
+              <a href="#" class="logo logo_pets">Cozy House</a>
+              <p class="logo__text logo__text_pets">Shelter for pets in Boston</p>
+            </div>
+            <ul class="navigation">
+              <li>
+                <a href="index.html" class="navigation__link navigation__link_pets">About the shelter</a>
+              </li>
+              <li>
+                <a href="#" class="navigation__link navigation__link_pets navigation__link_pets_hover">Our pets</a>
+              </li>
+              <li>
+                <a href="https://rolling-scopes-school.github.io/tolgonaia-JSFE2023Q1/shelter/index.html#helpus" class="navigation__link navigation__link_pets">Help the shelter</a>
+              </li>
+              <li>
+                <a href="#contacts" class="navigation__link navigation__link_pets">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="burger" id="burger">
+            <span class="burger__item burger__item_pets"></span>
+          </div>
+        </header>
+      </div>
+    </div>
+    <div class="wrapper pets_wrap">
       <h2>Our friends who <br>are looking for a house</h2>
       <div class="pets__block">
-        <div class="pet">
-          <img src="./src/img/friends/pets-katrine.png" alt="Katrine">
-          <p class="pet__title">Katrine</p>
-          <button class="button button_transparent">Learn more</button>
-        </div>
-        <div class="pet">
-          <img src="./src/img/friends/pets-jennifer.png" alt="Jennifer">
-          <p class="pet__title">Jennifer</p>
-          <button class="button button_transparent">Learn more</button>
-        </div>
-        <div class="pet">
-          <img src="./src/img/friends/pets-woody.png" alt="Woody">
-          <p class="pet__title">Woody</p>
-          <button class="button button_transparent">Learn more</button>
-        </div>
-        <div class="pet pet_tablet-sm">
-          <img src="./src/img/friends/pets-sophia.png" alt="Sophia">
-          <p class="pet__title">Sophia</p>
-          <button class="button button_transparent">Learn more</button>
-        </div>
-        <div class="pet pet_tablet-sm">
-          <img src="./src/img/friends/pets-timmy.png" alt="Timmy">
-          <p class="pet__title">Timmy</p>
-          <button class="button button_transparent">Learn more</button>
-        </div>
-        <div class="pet pet_tablet-sm">
-          <img src="./src/img/friends/pets-charly.png" alt="Charly">
-          <p class="pet__title">Charly</p>
-          <button class="button button_transparent">Learn more</button>
-        </div>
-        <div class="pet pet_tablet">
-          <img src="./src/img/friends/pets-scarlet.png" alt="Scarlet">
-          <p class="pet__title">Scarlet</p>
-          <button class="button button_transparent">Learn more</button>
-        </div>
-        <div class="pet pet_tablet">
-          <img src="./src/img/friends/pets-freddie.png" alt="Freddie">
-          <p class="pet__title">Freddie</p>
-          <button class="button button_transparent">Learn more</button>
-        </div>
       </div>
       <div class="pets__btn">
-        <button class="slider__btn button_disabled" disabled>
+        <button class="slider__btn button_disabled" id="pageFirst" disabled>
           &lt;&lt;
         </button>
-        <button class="slider__btn button_disabled" disabled>
+        <button class="slider__btn button_disabled" id="pagePrev" disabled>
           &lt;
         </button>
-        <button class="slider__btn button_round-colored">1</button>
-        <button class="slider__btn">
+        <button class="slider__btn button_round-colored" id="page"></button>
+        <button class="slider__btn" id="pageNext">
           &gt;
         </button>
-        <button class="slider__btn">
+        <button class="slider__btn" id="pageLast">
           &gt;&gt;
         </button>
       </div>
@@ -117,5 +81,7 @@
       <img class="footer__img" src="./src/img/footer/footer-puppy.png" alt="footer-dog">
     </div>
   </footer>
+  <div class="overlay overlay_active" id="overlay"><div class="modal"></div></div>
+  <script src="index.js"></script>
 </body>
 </html>

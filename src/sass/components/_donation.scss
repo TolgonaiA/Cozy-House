@@ -11,6 +11,11 @@
       flex-direction: column-reverse;
       padding: 80px 0 98px;
       max-width: 100%;
+      
+    }
+
+    @include media-tablet-sm {
+      text-align: center;
     }
 
     @include media-mobile {
@@ -78,6 +83,8 @@
     color: $color-subtitle;
     background: url(../img/donation/credit-card.svg) no-repeat 15px center, 
                 $color-brand;
+
+               
 
     @include media-mobile {
       font-size: 1.5rem;

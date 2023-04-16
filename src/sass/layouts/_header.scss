@@ -2,6 +2,10 @@
   display: flex;
   justify-content: space-between;
 
+  &_pets {
+    background: $color-white;
+  }
+
 
   @include media-tablet {
     padding: 0 15px;
@@ -17,6 +21,24 @@
 
   &_pets {
     padding: 30px 0;
+
+    
+  }
+
+  &__navigation {
+
+    @include media-tablet-sm {
+      position: absolute;
+      background-color: $color-text-light;
+      top:0px;
+      bottom: 0;
+      right: -320px;
+      transition: 3s;
+      width: 320px;
+      z-index: 98;
+      height: 100vh;
+    }
+    
   }
 }
 

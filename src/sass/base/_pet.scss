@@ -1,8 +1,9 @@
+
+
 .pet {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: 1s;
   background: $color-text-light;
   padding-bottom: 30px;
   border-radius: 9px 9px 0 0;
@@ -31,12 +32,12 @@
   
 
   &:hover {
-    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
-    transition-delay: 0.2s;
+    box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.4);
+    transition-delay: 0.3s;
   }
 
-  @include media-tablet {
-    &_tablet {
+  @include media-tablet-bg {
+    &_tablet-bg {
       display: none;
     }
   }
